@@ -83,6 +83,7 @@ var form = document.getElementById('sheetdb-form');
               response => response.json()
           ).then((html) => {
             // you can put any JS code here
+              fbq('track', 'Purchase');
             document.querySelector('.process-successfully').style.display="block"; 
             document.querySelector('.overlay').style.opacity="1";
             document.querySelector('.overlay').style.visibility="visible";
