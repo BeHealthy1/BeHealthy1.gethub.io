@@ -100,3 +100,24 @@ if(typeof(element) != 'undefined' && element != null )
 {
   document.querySelector('footer').style.margin="0 0 50px";
 }
+
+var element = document.getElementsByClassName('.sticky-cart-bar');
+if(typeof(element) != 'undefined' && element != null )
+{
+  document.querySelector('footer').style.margin="0 0 50px";
+}
+
+const myInput = document.getElementById("my-input");
+function stepper(btn){
+    let id = btn.getAttribute("id");
+    let min = 1;
+    let val = myInput.getAttribute("value");
+    let calcStep = (id == "increment") ? (1) : (-1);
+    let newValue = parseInt(val) + calcStep;
+    if(newValue >= min){
+        myInput.setAttribute("value", newValue);
+        document.getElementById("quantity").setAttribute("value", newValue);
+        document.getElementById("sticky").setAttribute("value", newValue);
+
+    }
+}
