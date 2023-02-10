@@ -103,11 +103,11 @@
             <div class="sticky-cart-bar">
                 <div class="container">
                     <div class="quantity">
-                        <span class="quantity-handler quantity-handler-left">
+                        <span id="increment" class="quantity-handler quantity-handler-left" onclick="stepper(this)">
                             <i class="fa-solid fa-plus"></i>
                         </span>
-                        <input type="number" class="single-quantity" value="1">
-                        <span class="quantity-handler quantity-handler-right">
+                        <input type="number" class="single-quantity" value="1" id="sticky" readonly>
+                        <span class="quantity-handler quantity-handler-right" onclick="stepper(this)">
                             <i class="fa-solid fa-minus"></i>
                         </span>
                     </div>
