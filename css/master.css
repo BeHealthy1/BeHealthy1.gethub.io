@@ -901,6 +901,7 @@ footer .footer-item li:hover{
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 5;
 }
 .sticky-cart-bar .container{
     display: flex;
