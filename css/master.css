@@ -894,11 +894,12 @@ footer .footer-item li:hover{
     color: transparent;
 }
 .sticky-cart-bar {
+    display:none;
     background-color: #fff;
     border-top: 1px solid #f0f0f0;
     padding: 10px 0;
     box-shadow: 0 -10px 20px -20px rgb(0 0 0 / 10%);
-    position: none;
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 5;
