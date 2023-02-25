@@ -48,6 +48,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+
 let slideIndex2 = 1 ;
 showSlides2(slideIndex2);
 function plusSlides2(n) {
@@ -70,6 +71,7 @@ function showSlides2(n) {
 }
 
 
+//sticky cart bar click on top
 
 
 //seend data
@@ -84,6 +86,12 @@ var form = document.getElementById('sheetdb-form');
           ).then((html) => {
             // you can put any JS code here
               fbq('track', 'Purchase', {value: 30.00, currency: 'USD'});
+              fbq('init', '498018699174553', {
+                em: 'email@email.com',         //Values will be hashed automatically by the pixel using SHA-256
+                fn: 'first_name',    
+                ln: 'last_name' ,
+                external_id :'id'
+              });
             document.querySelector('.process-successfully').style.display="block"; 
             document.querySelector('.overlay').style.opacity="1";
             document.querySelector('.overlay').style.visibility="visible";
@@ -94,12 +102,6 @@ var form = document.getElementById('sheetdb-form');
        });
         });
 
-
-var element = document.getElementsByClassName('.sticky-cart-bar');
-if(typeof(element) != 'undefined' && element != null )
-{
-  document.querySelector('footer').style.margin="0 0 50px";
-}
 
 var element = document.getElementsByClassName('.sticky-cart-bar');
 if(typeof(element) != 'undefined' && element != null )
@@ -121,3 +123,7 @@ function stepper(btn){
 
     }
 }
+
+
+//sticky bar display : none
+document.getElementsByClassName('.sticky-cart-bar').style.display="none"; 
