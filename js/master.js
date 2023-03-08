@@ -7,9 +7,9 @@ function show_slidenav()
 function hide_overlay()
 {
         document.querySelector('nav').style.transform="translate3D(100%, 0 ,0)"; 
-        document.querySelector('.process-successfully').style.display="none"; 
         document.querySelector('.overlay').style.opacity="0";
         document.querySelector('.overlay').style.visibility="hidden";
+        document.querySelector('.process-successfully').style.display="none"; 
 }
 
 
@@ -19,6 +19,61 @@ window.addEventListener("scroll" , function(){
     header.classList.toggle("fixed-header" , window.scrollY > 150 );
 })
 
+var element = document.getElementsByClassName('.sticky-cart-bar');
+if(typeof(element) != 'undefined' && element != null )
+{
+  document.querySelector('footer').style.margin="0 0 50px";
+}
+
+//start quantity
+const myInput = document.getElementById("my-input");
+function stepper(btn){
+    let id = btn.getAttribute("id");
+    let min = 1;
+    let val = myInput.getAttribute("value");
+    let calcStep = (id == "increment") ? (1) : (-1);
+    let newValue = parseInt(val) + calcStep;
+    if(newValue >= min){
+        myInput.setAttribute("value", newValue);
+        document.getElementById("quantity").setAttribute("value", newValue);
+        document.getElementById("sticky").setAttribute("value", newValue);
+
+    }
+}
+
+//end quantity
+
+//start seend data
+var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+              fbq('track', 'Purchase', {value: 30.00, currency: 'USD'});
+              fbq('init', '498018699174553', {
+                em: 'email@email.com',         //Values will be hashed automatically by the pixel using SHA-256
+                fn: 'first_name',    
+                ln: 'last_name' ,
+                external_id :'id'
+              });
+            document.querySelector('.process-successfully').style.display="block"; 
+            document.querySelector('.overlay').style.opacity="1";
+            document.querySelector('.overlay').style.visibility="visible";
+            yes=document.querySelector('.overlay');
+            yes.onclick = function(){
+              window.location.reload();
+            }
+       });
+        });
+//end send data
+
+
+// start slider
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -71,59 +126,11 @@ function showSlides2(n) {
 }
 
 
-//sticky cart bar click on top
+// end slider
 
 
-//seend data
-var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-              fbq('track', 'Purchase', {value: 30.00, currency: 'USD'});
-              fbq('init', '498018699174553', {
-                em: 'email@email.com',         //Values will be hashed automatically by the pixel using SHA-256
-                fn: 'first_name',    
-                ln: 'last_name' ,
-                external_id :'id'
-              });
-            document.querySelector('.process-successfully').style.display="block"; 
-            document.querySelector('.overlay').style.opacity="1";
-            document.querySelector('.overlay').style.visibility="visible";
-            yes=document.querySelector('.overlay');
-            yes.onclick = function(){
-              window.location.reload();
-            }
-       });
-        });
 
 
-var element = document.getElementsByClassName('.sticky-cart-bar');
-if(typeof(element) != 'undefined' && element != null )
-{
-  document.querySelector('footer').style.margin="0 0 50px";
-}
-
-const myInput = document.getElementById("my-input");
-function stepper(btn){
-    let id = btn.getAttribute("id");
-    let min = 1;
-    let val = myInput.getAttribute("value");
-    let calcStep = (id == "increment") ? (1) : (-1);
-    let newValue = parseInt(val) + calcStep;
-    if(newValue >= min){
-        myInput.setAttribute("value", newValue);
-        document.getElementById("quantity").setAttribute("value", newValue);
-        document.getElementById("sticky").setAttribute("value", newValue);
-
-    }
-}
 
 
-//sticky bar display : none
-document.getElementsByClassName('.sticky-cart-bar').style.display="none"; 
+
