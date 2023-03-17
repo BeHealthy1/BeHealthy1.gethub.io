@@ -55,7 +55,7 @@ var form = document.getElementById('sheetdb-form');
           ).then((html) => {
             // you can put any JS code here
               fbq('track', 'Purchase', {value: 30.00, currency: 'USD'});
-              fbq('init', '498018699174553', {
+              fbq('init', '914858669656314', {
                 em: 'email@email.com',         //Values will be hashed automatically by the pixel using SHA-256
                 fn: 'first_name',    
                 ln: 'last_name' ,
@@ -66,7 +66,7 @@ var form = document.getElementById('sheetdb-form');
             document.querySelector('.overlay').style.visibility="visible";
             yes=document.querySelector('.overlay');
             yes.onclick = function(){
-              window.location.reload();
+              window.location.href="https://behealthy.cloud/";
             }
        });
         });
