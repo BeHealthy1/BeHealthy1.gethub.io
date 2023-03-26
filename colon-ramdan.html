@@ -24,7 +24,7 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '914858669656314');
         fbq('track', 'PageView');
-        fbq('track', 'ViewContent',{content_type:'gain-weight-page'});
+        fbq('track', 'ViewContent',{content_type:'colone-ramdan-page'});
     </script>
     <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=914858669656314&ev=PageView&noscript=1"
@@ -32,6 +32,7 @@
 <!-- End Meta Pixel Code -->
 </head>
 <body>
+    <script>insert_event_code_here;</script>
     <div class="firstheader">
         <div class="text">
             <h3>Be Healthy X Ultimate dz</h3>
@@ -103,7 +104,7 @@
                 <p>مع أطيب التحيات،<span>Be Healthy</span></p>
 
             </div>
-            <div class="sticky-cart-bar">
+            <div class="sticky-cart-bar" dis>
                 <div class="container">
                     <div class="quantity">
                         <span id="increment" class="quantity-handler quantity-handler-left" onclick="stepper(this)">
@@ -114,7 +115,7 @@
                             <i class="fa-solid fa-minus"></i>
                         </span>
                     </div>
-                    <a href="#submit">اضغط هنا للتاكيد الطلب</a>
+                    <a href="#submit" onclick()="sub_sticky">اضغط هنا للتاكيد الطلب</a>
                 </div>
             </div>
             <div class="container">
@@ -123,17 +124,17 @@
                         <div class="container-slider">
                             <div class="mySlides mySlides-product">
                                 <div class="numbertext">1 / 3</div>
-                                <img src="image/weight-contol-pack.png" style="width:100%">
+                                <img src="image/pack-colon.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlides mySlides-product">
                                 <div class="numbertext">2 / 3</div>
-                                <img src="image/weight-contol-day.png" style="width:100%">
+                                <img src="image/colon-relax.png" style="width:100%">
                             </div>
 
                             <div class="mySlides mySlides-product">
                                 <div class="numbertext">3 / 3</div>
-                                <img src="image/weight-contol-night.png" style="width:100%">
+                                <img src="image/total-confort.png" style="width:100%">
                             </div>
 
                             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -144,34 +145,33 @@
                               </div>
                             <div class="row">
                               <div class="column">
-                                <img class="demo cursor" src="image/weight-contol-pack.png" style="width:100%" onclick="currentSlide(0)" alt="Pack contrôle du poids / باقة التحكم في الوزن">
+                                <img class="demo cursor" src="image/pack-colon.jpg" style="width:100%" onclick="currentSlide(0)" alt="Pack Confort">
                               </div>
                               <div class="column">
-                                <img class="demo cursor" src="image/weight-contol-day.png" style="width:100%" onclick="currentSlide(2)" alt=" Contrôle du poids de nuit / التحكم في الوزن الليلي ">
+                                <img class="demo cursor" src="image/colon-relax.png" style="width:100%" onclick="currentSlide(2)" alt=" Colon Relax + / كولون ريلاكس + ">
                               </div>
                               <div class="column">
-                                <img class="demo cursor" src="image/weight-contol-night.png" style="width:100%" onclick="currentSlide(3)" alt="Contrôle du poids du matin / التحكم في الوزن الصباحي ">
+                                <img class="demo cursor" src="image/total-confort.png" style="width:100%" onclick="currentSlide(3)" alt="Total Confort / الراحة تامة ">
                               </div>
                             </div>
                           </div>
                     </div>
                     <div class="description" id="submit">
-                        <h3>باقة التحكم في الوزن الجديدة</h3>
+                        <h3>باقة الراحة   pack confort الاقوى للقضاء على القولون</h3>
                         <div class="price">
                             <div class="price-before">
-                                <span class="value">4300</span>
+                                <span class="value">4000</span>
                                 <span class="currency">&nbsp;د.ج</span>
                             </div>
                             <div class="price-after">
-                                <span class="value">3800</span>
+                                <span class="value">3100</span>
                                 <span class="currency">&nbsp;د.ج</span>
-                                <h3>+التوصيل مجاني</h3>
                             </div>
 
 
                         </div>
                         <form action="https://sheetdb.io/api/v1/y718ndpztoi4v" method="post" id="sheetdb-form">
-                            <input type="hidden" name="data[type-product]" value="weight-contol">
+                            <input type="hidden" name="data[type-product]" value="colon">
                             <input type="hidden" name="data[quantity]" value="1" id="quantity">
                             <div class="chekout-form">
                                 <h2>للطلب ادخل معلوماتك في الخانات اسفله</h2>
@@ -187,7 +187,7 @@
                                 <div class="form-group">
                                     <input type="text" name="data[adress-home]" placeholder="العنوان بالضبط" required>
                                 </div>
-                                
+
                             </div>
                         </form>
                         <div class="confirm-order">
@@ -200,34 +200,67 @@
                                     <i class="fa-solid fa-minus"></i>
                                 </span>
                             </div>
-                            <button type="submit" form="sheetdb-form" value="Update" >اضغط هنا للتاكيد الطلب</button>
+                            <button id="laka" type="submit" form="sheetdb-form" value="Update" >اضغط هنا للتاكيد الطلب</button>
                         </div>
                         <div class="text-description">
-                            <h3> *** باقة التحكم في الوزن ***  </h3>
+                            <h3> *** باقة القولون  ***  </h3>
                             <div class="des-p">
-                                
+                                <!-- <p>
+                                    <strong>--Supreme 3WCS</strong> هو أكثر من مجرد منتج لفقدان الوزن - إنه حل يغير حياتك ويمكن أن يساعدك أخيرًا في تحقيق الجسد والثقة التي طالما حلمت بها. مع مزيج قوي من المكونات الطبيعية بالكامل ، تم تصميم Supreme 3WCS للمساعدة في قمع شهيتك ، وتعزيز التمثيل الغذائي الخاص بك ، وحرق الدهون بسرعة وفعالية.
+                                </p> -->
                                 <p>
-                                    <strong>تعتبر حزمة التحكم في الوزن </strong>طريقة طبيعية وفعالة لدعم أهدافك في إنقاص الوزن. يوفر مزيج التحكم في الوزن الليلي ونهار التحكم في الوزن حلاً شاملاً للتحكم في الوزن يساعدك على إدارة وزنك بشكل طبيعي. إنه مثالي لأي شخص يتطلع إلى تحقيق وزن صحي والحفاظ عليه. لذا ، ابدأ رحلة التحكم في الوزن اليوم مع حزمة التحكم في الوزن واستمتع بفوائد صحية ، وأكثر سعادة لك!
+                                    <strong>--قد يكون صيام رمضان</strong> صعبًا في بعض الأحيان على البطن والقولون. إذا كنت تبحث عن طريقة طبيعية للتخلص من مشاكل القولون لديك خلال شهر رمضان ، فقد تساعدك حزمة "التخلص من القولون". تحتوي هذه الحزمة على منتجين: Total Comfort و Colon Relax.
                                 </p>
+                                <p>
+                                    <strong>--فوائد المنتج :</strong>
+                                </p>
+                                <p>• يساهم في تقليل الانتفاخ وانتفاخ البطن وكذلك تحسين راحة الجهاز الهضمي.</p>
+                                <p>• يعزز حسن سير القولون.</p>
+                                <p>• حارب الانتفاخ والغازات والشعور بالثقل.</p>
+                                <p>• تسهيل الهضم وتهدئة الجهاز الهضمي.</p>
+                                <p>• يستخدم اليانسون الأخضر كمنشط للجهاز الهضمي.</p>
+                                <p>• ينقي الجسم ويزيل السموم منه.</p>
+                                <p>• يهدئ الإسهال والتهاب المعدة والأمعاء والإمساك.</p>
+                                <p>• يخفف من اضطرابات الجهاز الهضمي: حرقة المعدة ، انتفاخ البطن ، الانتفاخ ، التجشؤ ، تهيج الأمعاء.</p>
+                                <p>• يخفض نسبة الكوليسترول والدهون الثلاثية في الدم.</p>
+                                <p>• يزيل رائحة الفم الكريهة.</p>
+                                <p>
+                                    <strong style="color: red;">باستخدام هذين المنتجين معًا</strong> ، يمكنك تخفيف أعراض القولون خلال شهر رمضان والاستفادة الكاملة من فترة الصيام. جرب عرض "تخلص من القولون" اليوم واستمتع بشهر رمضان الهادئ.
+                                </p>
+                                <p>
+                                    <strong>--منتج ذة قاعدة نباتيه</strong> 100% طبيعي , مصنوع من طرف اخصاصين بالصحة و مدروس بدقة للوصول إلى احسن نتيجة ممكنة .
+                                </p>
+                                <p>
+                                    <strong>  --المنتج مصرحة لدى وزارة الصحة و التجارة .</strong>
+                                </p>
+                                
                                 <div class="product-details">
                                     <h2> مكونات الباقة وفوائدها :</h2>
                                     <div class="content">
-                                        <div class="box" data-header=" التحكم في الوزن الليلي  / Contrôle du poids de nuit ">
+                                        <div class="box" data-header="كولون ريلاكس + / Colon Relax">
                                             <div class="image">
-                                                <img src="image/weight-contol-day.png" alt="" style="width: 250px;">
+                                                <img src="image/colon-relax.png" alt="">
                                             </div>
-                                            <p style="font-weight: bold; color: #006c2e;">
-                                                التحكم في الوزن الصباحي هو شاي عشبي فعال للغاية لتثبيت الوزن والحفاظ على خطك
-بفضل الخليط المصمم بعناية والقائم على الشاي الأخضر للمساعدة في عملية التمثيل الغذائي لحرق الدهون وخاصة لتثبيت وزن الجسم.
-                                            </p>
+                                            <ul class="Benefits">
+                                               <li>• يساهم في تقليل الانتفاخ وانتفاخ البطن وكذلك تحسين راحة الجهاز الهضمي.</li>
+                                               <li>• يعزز حسن سير القولون.</li>
+                                               <li>• حارب الانتفاخ والغازات والشعور بالثقل.</li>
+                                               <li>• تسهيل الهضم وتهدئة الجهاز الهضمي.</li>
+                                               <li>• يستخدم اليانسون الأخضر كمنشط للجهاز الهضمي.</li>
+                                            </ul>
                                         </div>
-                                        <div class="box"data-header=" التحكم في الوزن الصباحي  / Contrôle du poids du matin">
+                                        <div class="box"data-header=" الراحة تامة / Total Confort">
                                             <div class="image">
-                                                <img src="image/weight-contol-night.png" alt="" style="width: 250px;">
+                                                <img src="image/total-confort.png" alt="">
                                             </div>
-                                           <p style="font-weight: bold; color: #006c2e;">التحكم في الوزن الليلي التي تتكون أساسًا من الكركديه ومكونات طبيعية أخرى تساعد الجسم على الاستقرار والحفاظ على وزن مثالي وتقليل التوتر أيضًا لقضاء ليلة هادئة ومريحة.</p>
+                                            <ul class="Benefits">
+                                                <li>● ينقي الجسم ويزيل السموم منه</li>
+                                                <li>● يهدئ الإسهال والتهاب المعدة والأمعاء والإمساك</li>
+                                                <li>● يخفف اضطرابات الجهاز الهضمي: حرقة ، انتفاخ ، انتفاخ ، تجشؤ ، تهيج الأمعاء</li>
+                                                <li>● يخفض نسبة الكوليسترول والدهون الثلاثية في الدم</li>
+                                                <li>● يزيل رائحة الفم الكريهة</li>
+                                            </ul>
                                         </div>
-                                        
                                     </div>
                                 </div>
                                 <p>
@@ -245,39 +278,39 @@
                                 <div class="packs">
                                     <div class="box">
                                         <div class="image">
-                                            <a href="colon-ramdan.html"><img src="image/pack-colon.jpg" alt=""></a>
+                                            <a href="weight-loss-ramadan.html"><img src="image/pack-weight-loss-ramadan.png" alt=""></a>
                                         </div>
-                                        <h3>باقة القولون </h3>
+                                        <h3>باقة Ramadan 3wcs</h3>
                                         <div class="price">
                                                 <div class="price-before">
-                                                    <span class="value">4000</span>
+                                                    <span class="value">5600</span>
                                                     <span class="currency">&nbsp;د.ج</span>
                                                 </div>
                                                 <div class="price-after">
-                                                    <span class="value">3100</span>
+                                                    <span class="value">5000</span>
                                                     <span class="currency">&nbsp;د.ج</span>
                                                 </div>
                                         </div>
-                                        <a href="colon-ramdan.html"><div class="buy">شراء الآن</div></a>
+                                        <a href="weight-loss-ramadan.html"><div class="buy">شراء الآن</div></a>
                                     </div>
                                     <div class="box">
                                         <div class="image">
-                                            <a href="supreme.html"><img src="image/supreme.png" alt=""></a>
+                                            <a href="special.html"><img src="image/special.jpg" alt=""></a>
                                         </div>
-                                        <h3>باقة supreme 3wcs</h3>
+                                        <h3>باقة المناطق  الزائدة</h3>
                                         <div class="price">
-                                                <div class="price-before">
-                                                    <span class="value">9900</span>
-                                                    <span class="currency">&nbsp;د.ج</span>
-                                                </div>
-                                                <div class="price-after">
-                                                    <span class="value">9400</span>
-                                                    <span class="currency">&nbsp;د.ج</span>
-                                                </div>
+                                            <div class="price-before">
+                                                <span class="value">5500</span>
+                                                <span class="currency">&nbsp;د.ج</span>
+                                            </div>
+                                            <div class="price-after">
+                                                <span class="value">4290</span>
+                                                <span class="currency">&nbsp;د.ج</span>
+                                            </div>
                                             <p>+ التوصيل مجاني</p>
-                                        </div>     
-                                        <a href="supreme.html"><div class="buy">شراء الآن</div></a>
-                                    </div>
+                                        </div>
+                                        <a href="special.html"><div class="buy" ">شراء الآن</div></a>
+                                    </div> 
                                     <div class="box">
                                         <div class="image">
                                             <a href="jumbo.html"><img src="image/jumbo.png" alt=""></a>
@@ -316,6 +349,24 @@
                                     </div>
                                     <div class="box">
                                         <div class="image">
+                                            <a href="weight-control.html"><img src="image/weight-contol-pack.png" alt=""></a>
+                                        </div>
+                                        <h3>باقة التحكم في الوزن</h3>
+                                        <div class="price">
+                                                <div class="price-before">
+                                                    <span class="value">4300</span>
+                                                    <span class="currency">&nbsp;د.ج</span>
+                                                </div>
+                                                <div class="price-after">
+                                                    <span class="value">3800</span>
+                                                    <span class="currency">&nbsp;د.ج</span>
+                                                </div>
+                                            <p>+ التوصيل مجاني</p>
+                                        </div>
+                                        <a href="weight-control.html"><div class="buy">شراء الآن</div></a>
+                                    </div>
+                                    <div class="box">
+                                        <div class="image">
                                             <a href="Anti-Chute.html"><img src="image/anti-chut.jpg" alt=""></a>
                                         </div>
                                         <h3>باقة تساقط الشعر</h3>
@@ -330,7 +381,7 @@
                                             </div>
                                             <p>+ التوصيل مجاني</p>
                                         </div>
-                                        <a href="standard.html"><div class="buy">شراء الآن</div></a>
+                                        <a href="Anti-Chute.html"><div class="buy">شراء الآن</div></a>
                                     </div>
                                     <div class="box">
                                         <div class="image">
@@ -348,7 +399,7 @@
                                             </div>
                                             <p>+ التوصيل مجاني</p>
                                         </div>
-                                        <a href="jumbo.html"><div class="buy">شراء الآن</div></a>
+                                        <a href="gain-wheight.html"><div class="buy">شراء الآن</div></a>
                                     </div>
                                 </div>
                         </div>
