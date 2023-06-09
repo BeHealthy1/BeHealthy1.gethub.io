@@ -1000,7 +1000,26 @@ footer .footer-item li:hover{
     background-color: rgb(255 0 0 / 80%);
 }
 
-
+.product .description .buynow{
+    border: 5px solid var(--grey-color);
+    padding: 20px;
+    margin-top: 40px;
+}
+.product .description .buynow h3{
+    font-weight: bold;
+    font-size: 22px;
+}
+.product .description .buynow span{
+    color: #fa4500;
+}
+@media (max-width:767px) {
+    .product .description .buynow{
+        padding: 10px;
+    }
+    .product .description .buynow h3{
+        font-size: 21px;
+    }
+}
 
 
 .product .description .text-description{
