@@ -481,7 +481,8 @@ align-items: center;
 }
 
 .content .packs .box:hover{
-border-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: 0 0px 13px 2px var(--main-color-alt);
 }
 
 .content .packs .image{
